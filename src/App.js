@@ -1,11 +1,13 @@
 import {Home} from './Component/Home'
+import {Header} from './Component/Header'
 
 function App() {
   return (
-    <>
-      <h1>Happy hack</h1>
-      <Home/>
-    </>
+    <div className='container'>
+   
+      <Header/>
+      
+    </div>
   )
 }
 
