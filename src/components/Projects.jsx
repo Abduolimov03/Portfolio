@@ -7,24 +7,24 @@ function Projects() {
 
   const projects = [
     {
-      title: "Student Payment Bot",
-      desc: "Telegram bot to manage student payments, generate reports and statistics.",
-      tech: "Aiogram, Django, PostgreSQL",
-      github: "https://github.com/asadbek/student-payment-bot",
+      title: "Smart Finance MVT",
+      desc: "Multi-tier personal finance web application with real-time analytics and reporting.",
+      tech: "Python, HTML, CSS",
+      github: "https://github.com/Abduolimov03/smart-finance-MVT",
       demo: "#",
     },
     {
-      title: "SSL & Port Scanner",
-      desc: "Web app that checks SSL certificate validity, issuer and open ports.",
-      tech: "Django, socket, ssl",
-      github: "https://github.com/asadbek/ssl-port-scanner",
+      title: "Online-Shop API",
+      desc: "RESTful API for a full-featured e-commerce platform with products, orders, and payments.",
+      tech: "Python, JavaScript, HTML",
+      github: "https://github.com/Abduolimov03/Online-Shop-API",
       demo: "#",
     },
     {
-      title: "Mini CMS Blog",
-      desc: "Simple CMS with authentication, posts, categories and comments.",
-      tech: "Django, DRF, JWT",
-      github: "https://github.com/asadbek/mini-cms",
+      title: "Social Network",
+      desc: "Backend for a social network with authentication, posts, comments, and likes.",
+      tech: "Python, HTML",
+      github: "https://github.com/Abduolimov03/Social-Network",
       demo: "#",
     },
   ];
@@ -53,6 +53,7 @@ function Projects() {
               <div className="text-xs text-slate-500 dark:text-slate-400 mb-4">
                 <span className="font-semibold">Tech:</span> {p.tech}
               </div>
+
               <div className="flex gap-3">
                 <a
                   href={p.github}

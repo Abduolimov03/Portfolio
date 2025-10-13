@@ -11,9 +11,7 @@ export default function About() {
     >
       <h2 className="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-6">Men haqimda</h2>
         <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-          Men — backend dasturchiman. Axborot xavfsizligi yo‘nalishida tahsil olganman va web-ilovalarni
-          xavfsiz, tezkor hamda barqaror qilishga intilaman. Django, REST API va PostgreSQL asosida
-          ishlaydigan tizimlarni loyihalash va optimallashtirish bilan shug‘ullanaman.
+            Backend dasturchi sifatida web-ilovalarni tezkor, barqaror va ishonchli qilishni o‘z oldimga maqsad qilganman. Django, REST API va PostgreSQL asosida ishlaydigan kompleks tizimlarni loyihalash, ishlab chiqish va optimallashtirish bo‘yicha tajribaga egaman.
         </p>
 
     </motion.section>
