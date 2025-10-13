@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin } from "lucide-react";
+import i18n from "../i18n";
 
-export default function Hero() {
+export default function Hero({ lang }) {
+  const txt = i18n[lang];
+
   return (
     <section
       id="home"
@@ -15,7 +17,14 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="text-4xl md:text-5xl font-extrabold text-blue-700 dark:text-blue-400 mb-4"
       >
-        Salom, men <span className="text-blue-800 dark:text-blue-300">Asadbekman 👋</span>
+        {txt.hero.greeting.split("Asadbek").map((part, i) => (
+          <span key={i}>
+            {part}
+            {i === 0 && (
+              <span className="text-blue-800 dark:text-blue-300">Asadbek</span>
+            )}
+          </span>
+        ))}
       </motion.h1>
 
       <motion.p
@@ -24,8 +33,7 @@ export default function Hero() {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mb-8 leading-relaxed"
       >
-        Backend dasturchi va axborot xavfsizligi mutaxassisi.
-        Django, PostgreSQL va xavfsiz web ilovalar yaratishda tajribaga egaman.
+        {txt.hero.aboutMe}
       </motion.p>
 
       <motion.div
@@ -41,7 +49,7 @@ export default function Hero() {
           aria-label="GitHub profile"
           className="text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 transition"
         >
-          <Github size={30} />
+          GitHub
         </a>
 
         <a
@@ -51,7 +59,7 @@ export default function Hero() {
           aria-label="LinkedIn profile"
           className="text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 transition"
         >
-          <Linkedin size={30} />
+          LinkedIn
         </a>
       </motion.div>
 
@@ -65,14 +73,14 @@ export default function Hero() {
           href="#projects"
           className="px-6 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition"
         >
-          Loyihalarim
+          {txt.projectsTitle}
         </a>
         <a
           href="/Asadbek_Resume.pdf"
           download
           className="px-6 py-2 border border-blue-700 text-blue-700 rounded-lg hover:bg-blue-50 transition"
         >
-          CV yuklab olish
+          {txt.cvButton}
         </a>
       </motion.div>
     </section>

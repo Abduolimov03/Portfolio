@@ -1,4 +1,8 @@
-export default function Skills() {
+import i18n from "../i18n";
+
+export default function Skills({ lang }) {
+  const txt = i18n[lang];
+
   const skills = [
     { name: "Python / Django", level: 90 },
     { name: "Django REST Framework", level: 85 },
@@ -10,7 +14,9 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-20 bg-blue-50 px-6">
-      <h2 className="text-3xl font-bold text-center text-blue-700 mb-10">Ko‘nikmalar</h2>
+      <h2 className="text-3xl font-bold text-center text-blue-700 mb-10">
+        {txt.skillsTitle}
+      </h2>
       <div className="max-w-4xl mx-auto space-y-5">
         {skills.map((skill) => (
           <div key={skill.name}>

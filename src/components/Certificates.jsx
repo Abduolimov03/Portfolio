@@ -1,6 +1,8 @@
-import { i18n } from "../i18n"; // mavjud bo‘lmasa, olib tashlang
+import i18n from "../i18n";
 
-export default function Certificates() {
+export default function Certificates({ lang }) {
+  const txt = i18n[lang];
+
   const certs = [
     { name: 'Coursera — Web App Security', img: '/cert-coursera.png', link: '#' },
     { name: 'Udemy — Django REST', img: '/cert-udemy.png', link: '#' },
@@ -8,14 +10,10 @@ export default function Certificates() {
   ];
 
   return (
-    <section
-      id="certificates"
-      aria-label="Sertifikatlar bo‘limi"
-      className="py-20 px-6 bg-blue-50 dark:bg-slate-900/40"
-    >
+    <section id="certificates" className="py-20 px-6 bg-blue-50 dark:bg-slate-900/40">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-semibold text-blue-700 dark:text-blue-400 mb-8">
-          Sertifikatlar {/* yoki {i18n.en.certificatesTitle} */}
+          {txt.certificatesTitle}
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -31,7 +29,9 @@ export default function Certificates() {
                   className="mx-auto w-32 h-32 object-contain mb-3 hover:scale-105 transition-transform"
                 />
               </a>
-              <div className="text-sm font-medium text-slate-700 dark:text-slate-200">{c.name}</div>
+              <div className="text-sm font-medium text-slate-700 dark:text-slate-200">
+                {c.name}
+              </div>
             </div>
           ))}
         </div>

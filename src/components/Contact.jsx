@@ -1,7 +1,7 @@
 import i18n from "../i18n";
 
-export default function Contact({ lang = "uz" }) {
-  const txt = i18n[lang] || i18n.uz; // fallback: agar noto‘g‘ri til bo‘lsa, uz ni oladi
+export default function Contact({ lang }) {
+  const txt = i18n[lang];
 
   return (
     <section id="contact" className="py-20 px-6 bg-gray-50 dark:bg-slate-900/40">
@@ -11,9 +11,7 @@ export default function Contact({ lang = "uz" }) {
         </h2>
 
         <p className="text-slate-700 dark:text-slate-300 mb-6">
-          {lang === "uz"
-            ? "Hamkorlik yoki ish takliflari uchun bog'laning."
-            : "Feel free to contact me for cooperation or job opportunities."}
+          {txt.contactText}
         </p>
 
         <form
@@ -25,21 +23,18 @@ export default function Contact({ lang = "uz" }) {
           <input
             name="name"
             placeholder={txt.placeholderName}
-            aria-label="Ismingiz"
             className="w-full p-3 border rounded-md bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 outline-none"
           />
           <input
             type="email"
             name="email"
             placeholder={txt.placeholderEmail}
-            aria-label="Email"
             className="w-full p-3 border rounded-md bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 outline-none"
           />
           <textarea
             name="message"
             placeholder={txt.placeholderMessage}
             rows={6}
-            aria-label="Xabar matni"
             className="w-full p-3 border rounded-md bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 outline-none resize-none"
           />
 

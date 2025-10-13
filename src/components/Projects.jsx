@@ -1,29 +1,29 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import i18n from "../i18n";
 
-function Projects() {
-  const { t } = useTranslation();
+export default function Projects({ lang }) {
+  const txt = i18n[lang];
 
   const projects = [
     {
-      title: "Smart Finance MVT",
-      desc: "Multi-tier personal finance web application with real-time analytics and reporting.",
-      tech: "Python, HTML, CSS",
+      title: txt.projects.smartFinance.title,
+      desc: txt.projects.smartFinance.desc,
+      tech: txt.projects.smartFinance.tech,
       github: "https://github.com/Abduolimov03/smart-finance-MVT",
       demo: "#",
     },
     {
-      title: "Online-Shop API",
-      desc: "RESTful API for a full-featured e-commerce platform with products, orders, and payments.",
-      tech: "Python, JavaScript, HTML",
+      title: txt.projects.onlineShop.title,
+      desc: txt.projects.onlineShop.desc,
+      tech: txt.projects.onlineShop.tech,
       github: "https://github.com/Abduolimov03/Online-Shop-API",
       demo: "#",
     },
     {
-      title: "Social Network",
-      desc: "Backend for a social network with authentication, posts, comments, and likes.",
-      tech: "Python, HTML",
+      title: txt.projects.socialNetwork.title,
+      desc: txt.projects.socialNetwork.desc,
+      tech: txt.projects.socialNetwork.tech,
       github: "https://github.com/Abduolimov03/Social-Network",
       demo: "#",
     },
@@ -33,7 +33,7 @@ function Projects() {
     <section id="projects" className="py-20 px-6 bg-gray-50 dark:bg-slate-900">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 text-center">
-          {t("projectsTitle") || "My Projects"}
+          {txt.projectsTitle}
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -88,5 +88,3 @@ function Projects() {
     </section>
   );
 }
-
-export default Projects;
