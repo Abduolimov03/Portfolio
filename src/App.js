@@ -1,19 +1,23 @@
-import {Home} from './Component/Home'
-import {Header} from './Component/Header'
-import {Footer} from './Component/Footer'
-// import img1 from './media/Ellipse.png';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Certificates from "./components/Certificates";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
   return (
-    <div className='container'>
-   
-      <Header/>
-      <Home/>
-      <Footer/>
-      {/* <img src={img1} alt="rasm"/> */}
-      
+    <div className="bg-white text-gray-800 font-sans scroll-smooth">
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Certificates />
+      <Contact />
+      <Footer />
     </div>
-  )
+  );
 }
-
-export default App;
