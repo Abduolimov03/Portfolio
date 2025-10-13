@@ -7,17 +7,22 @@ import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-export default function App() {
+// Tarjima faylingizni import qiling (masalan)
+import txt from "./locales/uz.json";
+
+function App() {
   return (
-    <div className="bg-white text-gray-800 font-sans scroll-smooth">
+    <>
       <Navbar />
       <Hero />
       <About />
       <Skills />
       <Projects />
       <Certificates />
-      <Contact />
+      <Contact txt={txt} /> {/* <-- shu joyda prop uzatyapmiz */}
       <Footer />
-    </div>
+    </>
   );
 }
+
+export default App;

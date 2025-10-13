@@ -1,5 +1,9 @@
-.container{
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 27px 148px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Qo‘shimcha o‘zingizning style-laringiz bo‘lsa, shu yerga yozing */
+html {
+  scroll-behavior: smooth;
 }
