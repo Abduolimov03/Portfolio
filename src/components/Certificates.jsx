@@ -4,9 +4,16 @@ export default function Certificates({ lang }) {
   const txt = i18n[lang];
 
   const certs = [
-    { name: 'Coursera — Web App Security', img: '/cert-coursera.png', link: '#' },
-    { name: 'Udemy — Django REST', img: '/cert-udemy.png', link: '#' },
-    { name: 'Cisco — Networking', img: '/cert-cisco.png', link: '#' },
+    {
+      name: "Najot Ta'lim — Python Backend (Django)",
+      img: "/cert-najottalim.png",
+      link: "#", // bu joyga haqiqiy sertifikat havolasini (PDF yoki URL) qo‘y
+    },
+    {
+      name: "TATU — Bakalavr diplomi (Axborot xavfsizligi)",
+      img: "/cert-bachelor.png",
+      link: "#", // bu yerga ham istasang diplom PDF havolasini qo‘yish mumkin
+    },
   ];
 
   return (
@@ -16,7 +23,7 @@ export default function Certificates({ lang }) {
           {txt.certificatesTitle}
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {certs.map((c) => (
             <div
               key={c.name}
@@ -26,7 +33,7 @@ export default function Certificates({ lang }) {
                 <img
                   src={c.img}
                   alt={c.name}
-                  className="mx-auto w-32 h-32 object-contain mb-3 hover:scale-105 transition-transform"
+                  className="mx-auto w-40 h-40 object-contain mb-4 hover:scale-105 transition-transform"
                 />
               </a>
               <div className="text-sm font-medium text-slate-700 dark:text-slate-200">
