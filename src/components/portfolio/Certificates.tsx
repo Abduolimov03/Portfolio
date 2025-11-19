@@ -2,6 +2,10 @@ import { motion } from "framer-motion";
 import i18n from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
 
+import diplom from "@/assets/diplom.svg";
+import sertificate from "@/assets/sertificate.jpg";
+
+
 interface CertificatesProps {
   lang: "uz" | "en";
 }
@@ -9,24 +13,12 @@ interface CertificatesProps {
 export default function Certificates({ lang }: CertificatesProps) {
   const txt = i18n[lang];
 
-//   const certs = [
-//     {
-//       name: "Najot Ta'lim — Python Backend (Django)",
-//       img: "public/diplom.svg",
-//       link: "#",
-//     },
-//     {
-//       name: "TATU — Bakalavr diplomi (Axborot xavfsizligi)",
-//       img: "public/sertificate.jpg",
-//       link: "#",
-//     },
-//   ];
-
 
 const certs = [
-  { name: "Najot Ta'lim — Python Backend (Django)", img: "/diplom.svg", link: "#" },
-  { name: "TATU — Bakalavr diplomi", img: "/sertificate.jpg", link: "#" },
+  { name: "Najot Ta'lim — Python Backend (Django)", img: diplom, link: "#" },
+  { name: "TATU — Bakalavr diplomi", img: sertificate, link: "#" },
 ];
+
 
   return (
     <section id="certificates" className="py-20 px-6 bg-section-bg">
