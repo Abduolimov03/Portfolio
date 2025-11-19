@@ -12,12 +12,12 @@ export default function Certificates({ lang }: CertificatesProps) {
   const certs = [
     {
       name: "Najot Ta'lim — Python Backend (Django)",
-      img: "/cert-najottalim.png",
+      img: "public/diplom.svg",
       link: "#",
     },
     {
       name: "TATU — Bakalavr diplomi (Axborot xavfsizligi)",
-      img: "/cert-bachelor.png",
+      img: "public/sertificate.jpg",
       link: "#",
     },
   ];
