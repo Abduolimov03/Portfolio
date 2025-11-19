@@ -9,18 +9,24 @@ interface CertificatesProps {
 export default function Certificates({ lang }: CertificatesProps) {
   const txt = i18n[lang];
 
-  const certs = [
-    {
-      name: "Najot Ta'lim — Python Backend (Django)",
-      img: "public/diplom.svg",
-      link: "#",
-    },
-    {
-      name: "TATU — Bakalavr diplomi (Axborot xavfsizligi)",
-      img: "public/sertificate.jpg",
-      link: "#",
-    },
-  ];
+//   const certs = [
+//     {
+//       name: "Najot Ta'lim — Python Backend (Django)",
+//       img: "public/diplom.svg",
+//       link: "#",
+//     },
+//     {
+//       name: "TATU — Bakalavr diplomi (Axborot xavfsizligi)",
+//       img: "public/sertificate.jpg",
+//       link: "#",
+//     },
+//   ];
+
+
+const certs = [
+  { name: "Najot Ta'lim — Python Backend (Django)", img: "/diplom.svg", link: "#" },
+  { name: "TATU — Bakalavr diplomi", img: "/sertificate.jpg", link: "#" },
+];
 
   return (
     <section id="certificates" className="py-20 px-6 bg-section-bg">
