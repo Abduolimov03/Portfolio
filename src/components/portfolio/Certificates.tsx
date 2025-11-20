@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import i18n from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
+import { Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 import diplom from "@/assets/diplom.svg";
 import sertificate from "@/assets/sertificate.jpg";
-
+import diplomatic from "@/assets/diplom.pdf";
 
 interface CertificatesProps {
   lang: "uz" | "en";
@@ -13,12 +15,30 @@ interface CertificatesProps {
 export default function Certificates({ lang }: CertificatesProps) {
   const txt = i18n[lang];
 
+  const certs = [
+    {
+      name: "Najot Ta'lim — Python Backend (Django)",
+      img: diplom,
+      downloadUrl: diplomatic,
+      isPdf: true
+    },
+    {
+      name: "TATU — Bakalavr diplomi",
+      img: sertificate,
+      downloadUrl: diplomatic,
+      isPdf: true
+    },
+  ];
 
-const certs = [
-  { name: "Najot Ta'lim — Python Backend (Django)", img: diplom, link: "#" },
-  { name: "TATU — Bakalavr diplomi", img: sertificate, link: "#" },
-];
-
+  const handleDownload = (cert: typeof certs[0]) => {
+    const link = document.createElement("a");
+    link.href = cert.downloadUrl;
+    const extension = cert.isPdf ? ".pdf" : ".jpg";
+    link.download = cert.name.replace(/[^a-zA-Z0-9]/g, "_") + extension;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section id="certificates" className="py-20 px-6 bg-section-bg">
@@ -38,21 +58,28 @@ const certs = [
             >
               <Card className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                    <div className="w-40 h-40 mx-auto mb-4 bg-muted rounded-lg flex items-center justify-center overflow-hidden hover:scale-105 transition-transform">
-                      <img
-                        src={cert.img}
-                        alt={cert.name}
-                        className="w-full h-full object-contain"
-                        onError={(e) => {
-                          e.currentTarget.src = "https://via.placeholder.com/160x160?text=Certificate";
-                        }}
-                      />
-                    </div>
-                  </a>
-                  <div className="text-sm font-medium text-foreground">
+                  <div className="w-40 h-40 mx-auto mb-4 bg-muted rounded-lg flex items-center justify-center overflow-hidden hover:scale-105 transition-transform">
+                    <img
+                      src={cert.img}
+                      alt={cert.name}
+                      className="w-full h-full object-contain"
+                      onError={(e) => {
+                        e.currentTarget.src = "https://via.placeholder.com/160x160?text=Certificate";
+                      }}
+                    />
+                  </div>
+                  <div className="text-sm font-medium text-foreground mb-3">
                     {cert.name}
                   </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="gap-2"
+                    onClick={() => handleDownload(cert)}
+                  >
+                    <Download size={16} />
+                    {lang === "uz" ? "Yuklab olish" : "Download"}
+                  </Button>
                 </CardContent>
               </Card>
             </motion.div>
