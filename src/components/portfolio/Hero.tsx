@@ -120,14 +120,14 @@ export default function Hero({ lang }: HeroProps) {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="flex flex-wrap gap-4 justify-center"
         >
-          <Button asChild size="lg" className="shadow-primary">
+          <Button asChild size="lg" className="shadow-lg hover:shadow-primary/50 transition-shadow">
             <a href="#projects" className="group">
               {txt.hero.projectsBtn}
               <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
             </a>
           </Button>
-          <Button asChild variant="outline" size="lg" className="shadow-md">
-            <a href="/Asadbek_Resume.pdf" download>
+          <Button asChild variant="outline" size="lg" className="shadow-md hover:shadow-lg transition-shadow">
+            <a href="src/assets/Asadbek_resume.pdf" download>
               {txt.hero.cvBtn}
             </a>
           </Button>
