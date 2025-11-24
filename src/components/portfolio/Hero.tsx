@@ -15,7 +15,6 @@ export default function Hero({ lang }: HeroProps) {
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 overflow-hidden"
     >
-      {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-hero-gradient-from via-hero-gradient-mid to-hero-gradient-to">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]" />
