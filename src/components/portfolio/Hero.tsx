@@ -20,7 +20,6 @@ export default function Hero({ lang }: HeroProps) {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]" />
       </div>
 
-      {/* Floating particles effect */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -133,7 +132,6 @@ export default function Hero({ lang }: HeroProps) {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
