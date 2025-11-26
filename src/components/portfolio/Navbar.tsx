@@ -26,7 +26,6 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         <h1 className="text-2xl font-bold text-primary">Asadbek.dev</h1>
 
-        {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-6">
           {navItems.map((item) => (
             <li key={item.key}>
@@ -50,7 +49,6 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
             {txt.header.language}
           </Button>
 
-          {/* Mobile menu button */}
           <button
             className="md:hidden text-foreground"
             onClick={() => setIsOpen(!isOpen)}
@@ -61,7 +59,6 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden bg-background border-t border-border">
           <ul className="flex flex-col py-4 px-6 space-y-3">
